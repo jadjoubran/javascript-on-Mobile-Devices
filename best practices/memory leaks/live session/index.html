@@ -1,0 +1,28 @@
+<html>
+<head></head>
+<body>
+
+
+	<input type="text" id="ask_bar" size="50" />
+	<Br />
+	<h3>Characters length: <span id="chars_len">0</span></h3>
+	
+
+	<script src="zepto.min.js"></script>
+	<script>
+
+		$(document).ready(function(){
+			$("#ask_bar").on('keypress', handle_keypress);
+		});
+
+		var chars_len = document.getElementById("chars_len");
+		var ask_bar = document.getElementById("ask_bar");
+
+		function handle_keypress(){
+			chars_len.innerHTML = ask_bar.value.length;
+		}
+
+	</script>
+
+</body>
+</html>

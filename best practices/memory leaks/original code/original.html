@@ -1,0 +1,22 @@
+<html>
+<head></head>
+<body>
+
+
+	<input type="text" id="ask_bar" size="100" />
+	<h3>Text length: <span id="text_length">0</span></h3>
+	
+	<script src="zepto.min.js"></script>
+	<script>
+		$("#ask_bar").on('keydown keyup', function(){
+
+			var text = $("#ask_bar").val();
+
+			$("#text_length").html( text.length );
+
+		});
+
+	</script>
+
+</body>
+</html>

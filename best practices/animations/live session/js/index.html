@@ -1,0 +1,57 @@
+<html>
+<head></head>
+<body>
+	
+	<style>
+		body{
+			padding: 0;
+			margin: 0;
+			color: white;
+			overflow: hidden;
+		}
+		#drawer{
+			position: absolute;
+			width: 200px;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: black;
+		}
+		#main{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #222;
+		}
+		#toggle{
+			width: 50px;
+			height: 50px;
+			background-color: #DDD;
+			cursor: pointer;
+		}
+	</style>
+
+
+	<div id="drawer">This is the drawer</div>
+
+	<div id="main">
+		<div id="toggle"></div><!-- and this is the toggle button -->
+		this is the main application
+	</div>
+	
+
+	<script src="zepto.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#toggle").on('tap', function(){
+			$("#main").animate({
+				left: '200px'
+			}, 200);
+		});
+	});
+	</script>
+
+</body>
+</html>

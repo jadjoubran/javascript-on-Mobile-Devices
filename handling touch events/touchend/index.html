@@ -1,0 +1,17 @@
+<html>
+	<head></head>
+	<body>
+		
+		
+		<h2 id="text">Awaiting TouchEnd event</h2>
+
+
+		<script src="zepto.min.js"></script>
+		<script>
+		$("#text").on('touchend', function(){
+			$(this).html('TouchEnd event fired');
+		});
+		</script>
+
+	</body>
+</html>

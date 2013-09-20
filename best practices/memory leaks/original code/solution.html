@@ -1,0 +1,26 @@
+<html>
+<head></head>
+<body>
+
+
+	<input type="text" id="ask_bar" size="100" />
+	<h3>Text length: <span id="text_length">0</span></h3>
+	
+	<script src="zepto.min.js"></script>
+	<script>
+
+		document.getElementById('ask_bar').addEventListener('keydown', handle_keypress);
+
+		var ask_bar = document.getElementById('ask_bar');
+		var text_length = document.getElementById('text_length');
+
+		function handle_keypress(){
+
+			text_length.innerHTML = ask_bar.value.length;
+
+		}
+
+	</script>
+
+</body>
+</html>
